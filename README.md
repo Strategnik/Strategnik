@@ -1,8 +1,8 @@
 # Strategnik
 
-**Nick Talbert** — B2B go-to-market strategist who builds the tooling instead of just talking about it.
+**Nick Talbert** — B2B go-to-market strategist who builds the infrastructure, not just the strategy deck.
 
-20+ years in positioning, pipeline mechanics, and GTM systems. The repos here are the working end of that: small, sharp tools that solve a real GTM or build problem, plus the graph layer behind [Ontogent](https://ontogent.ai).
+20+ years in positioning, pipeline mechanics, and GTM systems. The repos here are the working end of that — small, sharp tools — plus the multi-axis GraphRAG engine behind [Ontogent](https://ontogent.ai).
 
 ---
 
@@ -14,14 +14,17 @@ A B2B funnel **velocity** calculator. Most funnel math is static — this models
 A model router for Claude Code. Runs a cheap model by default and **escalates to Opus only when the task earns it** — stop paying top-tier rates for trivial work. Deliberate version pinning, event-driven upgrade ritual.
 `Shell` · OSS
 
-### 🕸️ Ontogent — the GraphRAG layer *(product → [ontogent.ai](https://ontogent.ai))*
-A GTM intelligence layer built on a **knowledge graph**, not a pile of documents. The graph half — the part worth describing publicly:
+### 🕸️ Ontogent — multi-axis GraphRAG infrastructure *(product → [ontogent.ai](https://ontogent.ai))*
+Two layers. The bottom one — the engineering — is the part I'm pointing at here.
 
-- **Artifact-first model.** Every ingested source becomes a typed artifact with embeddings and multiple retrieval axes, not an undifferentiated chunk. If retrieval can't find it, it isn't in the graph.
-- **Multi-axis GraphRAG.** Retrieval combines vector similarity with graph traversal (entities, relationships, inferred edges) so context is assembled by *relevance and connection*, not just nearest-neighbor text.
-- **Self-enriching graph.** Inference rules run as graph queries to derive new edges, surface tensions, and flag orphaned nodes that signal drift.
+**Infrastructure layer.** A real multi-axis GraphRAG engine, not vector-search-over-chunks with a graph diagram bolted on:
+- **Artifact-first ingestion.** Every source becomes a typed artifact with embeddings and multiple retrieval axes. If multi-axis retrieval can't surface it, it isn't in the graph.
+- **Multi-axis retrieval.** Vector similarity *and* graph traversal — entities, relationships, inferred edges — combine to assemble context by relevance *and* connection, not nearest-neighbor text alone.
+- **Self-enriching graph.** Inference rules run as graph queries to derive new edges, detect contradiction/tension, and flag orphaned nodes as drift signals.
 
-The result: an LLM gets the highest-relevance GTM context to reason over — and the graph stays the source of truth, not the prompt.
+**Knowledge layer.** 20+ years of GTM judgment — positioning, ICP, pipeline mechanics — encoded as canonical playbooks the engine applies. That's the moat, and it stays behind [ontogent.ai](https://ontogent.ai).
+
+The hard infrastructure is built and real. The soft layer on top is where the value compounds.
 
 ---
 
