@@ -14,17 +14,22 @@ A B2B funnel **velocity** calculator. Most funnel math is static — this models
 A model router for Claude Code. Runs a cheap model by default and **escalates to Opus only when the task earns it** — stop paying top-tier rates for trivial work. Deliberate version pinning, event-driven upgrade ritual.
 `Shell` · OSS
 
-### 🧩 [ontogent-core](https://github.com/Strategnik/ontogent-core)
-The **open context engine** behind Ontogent (MIT). Domain-agnostic infrastructure: pack format → loader → validator → constrained-CEL condition evaluator → **Shield→Rank resolver** → MCP delivery. Zero domain knowledge compiled in — delete the packs and it still runs, it just has nothing to apply. *The plumbing is open; the brain is the content.*
+---
+
+## Ontogent — the context layer for GTM AI
+
+A knowledge-graph intelligence layer that gives an LLM *domain-correct* GTM context. Two pieces are open and inspectable; the moat stays behind the product.
+
+### 🕸️ [graphrag-demo](https://github.com/Strategnik/graphrag-demo) — multi-axis GraphRAG, from scratch
+Dependency-free and runnable in one command. Combines **vector similarity + axis filtering + graph traversal**, fuses the signals with **Reciprocal Rank Fusion**, diversifies with **MMR**, and runs **graph-query inference** to derive new edges and flag drift — every result carries provenance (e.g. `graph_traversal:SUPPORTS@depth2`). Clone it and watch a weakly-matched artifact correctly rank #1 because three signals agree.
+`TypeScript` · OSS · `bun run demo -- "your question"`
+
+### 🧩 [ontogent-core](https://github.com/Strategnik/ontogent-core) — the open context engine
+Domain-agnostic infrastructure (MIT): pack format → loader → validator → constrained-CEL evaluator → **Shield→Rank resolver** → MCP delivery. Zero domain knowledge compiled in — delete the packs and it still runs, it just has nothing to apply. *The plumbing is open; the brain is the content.*
 `TypeScript` · OSS · runs out of the box
 
-### 🕸️ Ontogent — the GraphRAG retrieval layer *(product → [ontogent.ai](https://ontogent.ai))*
-On top of the open engine sits the retrieval layer that makes context *correct*, not just present:
-- **Artifact-first ingestion.** Every source becomes a typed artifact with embeddings and multiple retrieval axes. If multi-axis retrieval can't surface it, it isn't in the graph.
-- **Multi-axis GraphRAG.** Vector similarity *and* graph traversal — entities, relationships, inferred edges — combine to assemble context by relevance *and* connection, not nearest-neighbor text alone.
-- **Self-enriching graph.** Inference rules run as graph queries (Cypher over the node graph) to derive new edges, detect contradiction/tension, and flag orphaned nodes as drift signals.
-
-This layer, plus the canonical GTM playbooks — 20+ years of positioning and pipeline judgment — is the moat, and it stays behind [ontogent.ai](https://ontogent.ai).
+### 🔒 The product *([ontogent.ai](https://ontogent.ai))*
+The hosted layer swaps in a learned embedding model, a cross-encoder reranker, and the **canonical GTM playbooks** — 20+ years of positioning and pipeline judgment encoded as authority-weighted content. That's the moat, and it stays private.
 
 ---
 
